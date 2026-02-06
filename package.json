@@ -5,13 +5,17 @@
   "license": "MIT",
   "type": "commonjs",
   "bin": {
-    "codex-darcula-theme": "./codex-darcula-theme.js"
+    "codex-darcula-theme": "./codex-darcula-theme.js",
+    "codex-darcula-runtime-inject": "./codex-darcula-runtime-inject.js"
   },
   "scripts": {
-    "check": "node --check ./codex-darcula-theme.js",
+    "check": "node --check ./codex-darcula-theme.js && node --check ./codex-darcula-runtime-inject.js",
     "status": "node ./codex-darcula-theme.js status",
     "patch": "node ./codex-darcula-theme.js patch",
-    "restore": "node ./codex-darcula-theme.js restore"
+    "restore": "node ./codex-darcula-theme.js restore",
+    "runtime:once": "node ./codex-darcula-runtime-inject.js --once --start-app",
+    "runtime:watch": "node ./codex-darcula-runtime-inject.js --start-app",
+    "runtime:remove": "node ./codex-darcula-runtime-inject.js --remove"
   },
   "keywords": [
     "codex",
